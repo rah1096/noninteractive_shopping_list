@@ -3,6 +3,11 @@
     src: url(../fonts/raleway/Raleway-ExtraLight.ttf);
 }
 
+@font-face {
+    font-family: Raleway-ExtraBold;
+    src: url(../fonts/raleway/Raleway-ExtraBold.ttf);
+}
+
 body {
     margin: 0px;
     background-image: url("https://images.unsplash.com/photo-1416339134316-0e91dc9ded92?q=80&fm=jpg&s=c5b006c877412a97d41a3ecb8bf7f0c1");
@@ -76,6 +81,20 @@ body {
     font-size: larger;
 }
 
+input {
+    border: none;
+    height: 40px;
+    width: 300px;
+    margin-top: 5px;
+    font-family: Raleway-ExtraLight;
+    font-size: 40px;
+}
+
+textarea:focus, input:focus {
+    border: none;
+    outline: none;
+}
+
 .add-items-bar h3 {
     color: lightgrey;
 }
@@ -85,7 +104,11 @@ body {
     color: lightgrey;
     font-family: Raleway-ExtraLight;
     left: 331px;
+}
 
+.add-items .clr h1:hover {
+    cursor: pointer;
+    font-family: Raleway-ExtraBold;
 }
 
 .add-button {
@@ -100,6 +123,15 @@ body {
     color: white;
     left: 374px;
     top: 30px;
+}
+
+.add-button:hover, .add-button h2:hover {
+    cursor: pointer;
+}
+
+.add-button:active, .add-button h2:active {
+    cursor: pointer;
+    background-color: #00c500;
 }
 
 .add-button h2 {
@@ -136,13 +168,17 @@ body {
 
 .list-items .ind-items .check-box {
     position: absolute;
-    left: 20px;
     z-index: 10;
     width: 20px;
     height: 20px;
     border: 2px solid lightgrey;
     top: 16px;
     left: 14px;
+}
+
+.list-items .ind-items .check-box:hover {
+    cursor: pointer;
+    border: 4px solid lightgrey;
 }
 
 .list-items .ind-items .del h1 {
@@ -154,7 +190,12 @@ body {
     font-size: 1.3em;
 }
 
-.check {
+.list-items .ind-items .del h1:hover {
+    cursor: pointer;
+    font-family: Raleway-ExtraBold;
+}
+
+.line {
     position: absolute;
     width: 320px;
     border: 1px solid lightgrey;
@@ -165,3 +206,41 @@ body {
 .checked {
     color: lightgrey;
 }
+
+.check {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transform: rotate(-5deg);
+    z-index: 20;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+.left {
+    width: 7px;
+    border: 1px solid lightgrey;
+    position: absolute;
+    top: 20px;
+    left: 3px;
+    transform: rotate(45deg);
+    background-color: lightgrey;
+    color: lightgrey;
+}
+
+.right {
+    width: 20px;
+    border: 1px solid lightgrey;
+    position: absolute;
+    top: 15.5px;
+    left: 7px;
+    transform: rotate(-45deg);
+    background-color: lightgrey;
+    color: lightgrey;
+}
+
+.container {
+    overflow: scroll;
+    height: 500px;
+}
+

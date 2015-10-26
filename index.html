@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/js.js"></script>
     <title>Shopping List</title>
 </head>
 <body>
@@ -13,43 +15,53 @@
                     <h1>My Shopping List</h1>
                 </div>
                 <div class="add-items">
-                    <div class="add-items-bar"><h3>Add items here...</h3></div>
-                    <div class="clr"><h1>X</h1></div>
+                    <div class="add-items-bar"><input type="text" alt="Add items" placeholder="Add item here..."/></div>
+                    <div class="clr"><h1 id="clr1">X</h1></div>
                     <div class="add-button"><h2>Add</h2></div>
                 </div>
-                <div class="list-items">
-                    <div class="ind-items">
-                        <div class="check-box"></div>
-                        <h3>Milk</h3>
-                        <div class="del"><h1>X</h1></div>
+                <div class="container">
+                    <div class="list-items">
+                        <div class="ind-items">
+                            <div class="check-box"></div>
+                            <h3>Milk</h3>
+                            <div class="del"><h1>X</h1></div>
+                        </div>
                     </div>
-                </div>
-                <div class="list-items">
-                    <div class="ind-items">
-                        <div class="check-box"></div>
-                        <h3>Eggs</h3>
-                        <div class="del"><h1>X</h1></div>
+                    <div class="list-items">
+                        <div class="ind-items">
+                            <div class="check-box"></div>
+                            <h3>Eggs</h3>
+                            <div class="del"><h1>X</h1></div>
+                        </div>
                     </div>
-                </div>
-                <div class="list-items">
-                    <div class="ind-items">
-                        <div class="check-box"></div>
-                        <h3>Cheese</h3>
-                        <div class="del"><h1>X</h1></div>
+                    <div class="list-items">
+                        <div class="ind-items">
+                            <div class="check-box"></div>
+                            <h3>Cheese</h3>
+                            <div class="del"><h1>X</h1></div>
+                        </div>
                     </div>
-                </div>
-                <div class="list-items">
-                    <div class="ind-items">
-                        <div class="check"></div>
-                        <h3 class="checked">Sugar loaded cereal</h3>
-                        <div class="del"><h1>X</h1></div>
+                    <div class="list-items">
+                        <div class="ind-items">
+                            <div class="check">
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="line"></div>
+                            <h3 class="checked">Sugar loaded cereal</h3>
+                            <div class="del"><h1>X</h1></div>
+                        </div>
                     </div>
-                </div>
-                <div class="list-items">
-                    <div class="ind-items">
-                        <div class="check"></div>
-                        <h3 class="checked">Frozen waffles</h3>
-                        <div class="del"><h1>X</h1></div>
+                    <div class="list-items">
+                        <div class="ind-items">
+                            <div class="check">
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="line"></div>
+                            <h3 class="checked">Frozen waffles</h3>
+                            <div class="del"><h1>X</h1></div>
+                        </div>
                     </div>
                 </div>
             </div>
