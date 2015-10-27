@@ -6,9 +6,16 @@ $(document).ready(function() {
     $('.add-button').on('click', function() {
         if ($('input').val()) {
             $('.list-items:first').before('<div class="list-items">' +
-                '<div class="ind-items"> <div class="check-box"></div>' +
-                '<h3 class="item-name"></h3> <div class="del"><h1>X</h1></div></div></div>');
-            $('.item-name:first').prepend($('input').val());
+                '<div class="ind-items">' +
+                '<div class="check-box"></div>' +
+                '<div class="check">' +
+                '<div class="left"></div>' +
+                '<div class="right"></div>' +
+                '</div>' +
+                '<h3 class="not-lined"></h3>' +
+                '<div class="del"><h1>X</h1></div>' +
+                '</div>');
+            $('.not-lined:first').prepend($('input').val());
             $('input').val('');
         };
     });
@@ -30,20 +37,34 @@ $(document).ready(function() {
     });
 
     //check items
-    $('.list-container .list-phone .display .container .list-items').on('click', '.check-box', function() {
-        $(this).replaceWith('<div class="check">' +
-            '<div class="left"></div>' +
-            '<div class="right"></div>' +
-            '</div>');
-        $(this).child().after('<div class="line"></div>');
-        $(this).siblings('h3').css({color: 'lightgrey'});
+    $(document).on('click', '.check-box', function() {
+        $(this).hide();
+        $(this).next().show();
+        $(this).next().next().css({'text-decoration': 'line-through', 'color': 'lightgrey'});
+    });
+
+    $(document).on('click', '.check-box1', function() {
+        $(this).hide();
+        $(this).next().show();
+        $(this).next().next().css({'text-decoration': 'line-through', 'color': 'lightgrey'});
     });
 
     //uncheck items
-    //$('div.container').on('click', '.check', function() {
-    //    $(this).replaceWith('<div class="check-box"></div>')
-    //    $(this).eq(1).remove();
-    //    $(this).siblings('h3').css({color: 'black'});
-    //});
+    $(document).on('click', '.check', function() {
+        $(this).next().css({'text-decoration': 'none', 'color': 'black', 'cursor': 'pointer'});
+        $(this).hide();
+        $(this).prev().show();
+    });
+
+    $(document).on('click', '.check1', function() {
+        $(this).hide();
+        $(this).prev().show();
+        $(this).next().css({'text-decoration': 'none', 'color': 'black'});
+    });
+
+    $(document).on('click', '.del', function() {
+        $(this).parent().parent().remove();
+    });
+
 });
 
